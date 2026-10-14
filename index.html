@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#251923">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Melty Study">
+<meta name="description" content="ピンクと黒のかわいい勉強メモアプリ">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icon-192.png">
+<title>♡ MELTY STUDY NOTE ♡</title>
+<style>
+:root{--ink:#29202a;--pink:#e65391;--pale:#fff5fa;--line:#f1cadd;--muted:#a67891}
+*{box-sizing:border-box}body{margin:0;background:var(--pale);color:#392432;font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN",Meiryo,sans-serif;padding:env(safe-area-inset-top) 12px env(safe-area-inset-bottom);font-size:14px}
+button,input,select,textarea{font:inherit}button{cursor:pointer;-webkit-tap-highlight-color:transparent}button:focus-visible,input:focus-visible,select:focus-visible,[contenteditable]:focus-visible{outline:2px solid #e65391;outline-offset:2px}
+.app{max-width:850px;margin:auto;padding:12px 0 24px}.hero{background:var(--ink);color:white;border-radius:18px;padding:18px;position:relative;overflow:hidden}.hero:after{content:"♡";position:absolute;right:16px;top:0;font-size:60px;color:#e65391;opacity:.8}.eyebrow{font-size:10px;letter-spacing:2px;color:#f2a6ca}.brand{font-size:25px;font-weight:900;letter-spacing:1px;margin-top:6px}.brand span{color:#f078ae}.sub{font-size:11px;color:#e8c5d7;margin-top:5px}.panel{background:#fff;border:1px solid var(--line);border-radius:15px;padding:12px;margin-top:12px;min-width:0}.panelhead{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px;font-weight:850}.tiny{font-size:10px;letter-spacing:1px;color:#b75a85}.btn{border:1px solid #f0bfd4;background:#fff4f9;border-radius:9px;padding:8px 10px;color:#4a2338;font-size:12px}.primary{background:var(--pink);color:white;border:0;border-radius:10px;padding:10px 12px;font-size:12px;font-weight:700}.darkbtn{background:var(--ink);color:white;border:0;border-radius:10px;padding:10px 12px;font-size:12px}.input{width:100%;border:1px solid #f0c7da;border-radius:9px;padding:10px;background:#fffafd;color:#392230}.row{display:flex;gap:7px;align-items:center;flex-wrap:wrap}.note-list{display:flex;gap:7px;overflow-x:auto;padding:2px 0 6px}.note-chip{min-width:118px;max-width:180px;text-align:left;border:1px solid #f2d1e0;background:#fff9fc;border-radius:11px;padding:10px;color:#45273a}.note-chip.active{border-color:var(--pink);background:#ffedf5}.note-chip .name{font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.note-chip .meta{font-size:10px;color:#b28a9e;margin-bottom:4px}.toolbar{display:flex;gap:6px;flex-wrap:wrap}.toolbar .btn{min-height:34px}.swatch{width:25px;height:25px;border-radius:50%;border:2px solid white;outline:1px solid #e5c6d4;padding:0}.editor{min-height:280px;outline:none;line-height:1.9;padding:15px;font-size:15px;overflow-wrap:anywhere;word-break:break-word}.editor:empty:before{content:attr(data-placeholder);white-space:pre-wrap;color:#c4a4b4}.editor img{max-width:100%;height:auto;border-radius:9px;margin:8px 0;display:block}.editor h2{font-size:20px;color:#d84387}.editor blockquote{border-left:3px solid var(--pink);padding-left:12px;margin-left:0;color:#96617c}.editor table{border-collapse:collapse;width:100%}.editor td{border:1px solid #e9bfd2;padding:5px}.editortop{padding:12px 14px;background:#fff0f7;border-bottom:1px solid #f3d0e0;display:flex;justify-content:space-between;align-items:center;gap:8px}.editormeta{padding:9px 12px;border-bottom:1px solid #f6e2eb;background:#fffafd;font-size:10px;color:#9b7185}.editorfoot{padding:10px 12px;background:#fff7fb;border-top:1px solid #f3d6e4;display:flex;gap:7px;justify-content:space-between;align-items:center;flex-wrap:wrap}.taskpanel{background:#2b202a;color:#fff;border-radius:15px;padding:14px;margin-top:12px}.tasklist{display:flex;flex-direction:column;gap:11px;font-size:13px}.tasklist label{display:flex;gap:9px;align-items:flex-start;color:#fff;overflow-wrap:anywhere}.tasklist input{accent-color:#f078ae;margin-top:3px;flex-shrink:0}.tasklist input:checked+span{color:#f4b9d3;text-decoration:line-through}.taskinput{flex:1;min-width:0;border:1px solid #6a4d60;background:#382b37;color:#fff;border-radius:8px;padding:9px}.progress{font-size:10px;color:#f0b8d2;margin-top:10px}.foot{text-align:center;padding:18px 4px 2px;font-size:10px;letter-spacing:2px;color:#c28aa5}.hidden{display:none!important}.status{font-size:11px;color:#a14a77;min-height:16px}.danger{color:#a21f50}.divider{height:1px;background:#f5dce7;margin:11px 0}.filelabel{cursor:pointer;display:inline-block}.installhint{font-size:11px;line-height:1.7;color:#8f6278;background:#fff0f7;border-radius:10px;padding:10px;margin-top:10px}
+@media(min-width:700px){.twocol{display:grid;grid-template-columns:1fr 1fr;gap:12px}.twocol .panel{margin-top:12px}.editor{min-height:400px}}
+</style>
+</head>
+<body><main class="app">
+<header class="hero"><div class="eyebrow">MY PRIVATE STUDY ROOM</div><div class="brand">MELTY <span>STUDY</span></div><div class="sub">♡ かわいく書いて、かわいく覚える ♡</div></header>
+<section class="panel">
+<div class="panelhead"><span>♡ MY NOTE LIST</span><button id="newNote" class="primary">＋ 新規ノート</button></div>
+<div id="noteList" class="note-list"></div>
+<div class="row"><label for="subject" style="font-size:11px;color:#98677e">教科</label><select id="subject" class="input" style="flex:1;width:auto"><option>英語</option><option>数学</option><option>国語</option><option>理科</option><option>社会</option><option>資格・検定</option><option>その他</option></select></div>
+<input id="noteTitle" class="input" value="今日の勉強ノート" aria-label="ノートタイトル" style="font-weight:800;font-size:16px;margin-top:9px">
+<div class="row" style="justify-content:space-between;margin-top:9px"><span class="tiny">この端末に自動保存</span><button id="deleteNote" class="btn danger">ノートを削除</button></div>
+<div id="storageStatus" class="status" aria-live="polite"></div>
+</section>
+<section class="panel">
+<div class="panelhead"><span>✧ TEXT DECORATION</span><span class="tiny">EDIT YOUR WAY</span></div>
+<div class="toolbar">
+<button class="btn" data-cmd="bold"><b>B 太字</b></button><button class="btn" data-cmd="italic"><i>I 斜体</i></button><button class="btn" data-cmd="underline"><u>U 下線</u></button><button class="btn" data-cmd="strikeThrough"><s>S</s> 取消</button>
+<select id="fontSize" class="btn" aria-label="文字サイズ"><option value="3">標準サイズ</option><option value="2">小さめ</option><option value="4">大きめ</option><option value="5">見出し</option><option value="6">特大</option></select>
+</div>
+<div style="font-size:11px;font-weight:800;margin:12px 0 7px">文字カラー ♡</div>
+<div class="toolbar" id="colors">
+<button class="swatch" data-color="#29202a" style="background:#29202a" aria-label="黒"></button><button class="swatch" data-color="#e65391" style="background:#e65391" aria-label="ピンク"></button><button class="swatch" data-color="#f18ab8" style="background:#f18ab8" aria-label="ライトピンク"></button><button class="swatch" data-color="#8d4975" style="background:#8d4975" aria-label="紫"></button><button class="swatch" data-color="#447db2" style="background:#447db2" aria-label="青"></button><button class="swatch" data-color="#38876b" style="background:#38876b" aria-label="緑"></button><button class="swatch" data-color="#d49a34" style="background:#d49a34" aria-label="ゴールド"></button><label class="btn" style="display:flex;gap:5px;align-items:center">＋好きな色<input id="customColor" type="color" value="#e65391" aria-label="好きな色" style="width:22px;height:22px;padding:0;border:0;background:transparent"></label>
+</div>
+<div style="font-size:11px;font-weight:800;margin:12px 0 7px">ノートパーツ ♡</div>
+<div class="toolbar"><button class="btn" id="heading">✦ 見出し</button><button class="btn" id="highlight">蛍光マーカー</button><button class="btn" id="quote">♡ 重要ポイント</button><button class="btn" id="checkLine">□ チェック項目</button><button class="btn" id="heart">♡ ハート</button><button class="btn danger" id="deletePart" title="削除したいパーツ内をタップしてから押してね">⌫ パーツ削除</button><label class="btn filelabel">＋ 画像追加<input id="imageInput" type="file" accept="image/*" multiple class="hidden"></label></div>
+</section>
+<section class="panel" style="padding:0;overflow:hidden">
+<div class="editortop"><div><div class="tiny">MY CANVAS</div><div style="font-weight:900">✧ ノートを書く</div></div><label class="primary filelabel">＋ 画像を追加<input id="imageInput2" type="file" accept="image/*" multiple class="hidden"></label></div>
+<div class="editormeta">文字を選択してから色や太さを変更してね ♡ パーツは同じボタンでもう一度解除、または「パーツ削除」で削除できます。</div>
+<div id="editor" class="editor" contenteditable="true" spellcheck="false" role="textbox" aria-label="ノート本文" data-placeholder="ここに自由に書いてね ♡&#10;&#10;今日覚えたいこと、授業のまとめ、テスト対策など……"></div>
+<div class="editorfoot"><span id="wordCount" style="font-size:10px;color:#aa7b91">0 文字</span><div class="toolbar"><button id="undo" class="btn">↶ 戻す</button><button id="redo" class="btn">↷ やり直す</button><button id="export" class="darkbtn">JSON書き出し</button></div></div>
+</section>
+<section class="taskpanel">
+<div class="eyebrow">♡ LITTLE STUDY GOALS</div><div style="font-weight:850;font-size:14px;margin:5px 0 12px">今日のやることリスト</div>
+<div id="tasks" class="tasklist"><label><input type="checkbox"><span>今日の授業を復習する</span></label><label><input type="checkbox"><span>大事なところにマーカーを引く</span></label><label><input type="checkbox"><span>明日の勉強を準備する</span></label></div>
+<div class="row" style="margin-top:13px"><input id="taskInput" class="taskinput" placeholder="やることを追加…"><button id="addTask" class="primary">追加</button></div><div id="progress" class="progress">0 / 3 完了 ♡</div>
+</section>
+<div class="installhint"><b>iPhoneに追加する方法</b><br>このWebアプリをSafariで開く → 共有ボタン →「ホーム画面に追加」。オフライン起動にも対応しています。初回はインターネット接続が必要です。</div>
+<div class="foot">MADE WITH ♡ FOR YOUR STUDY DAYS</div>
+</main>
+<script>
+(()=>{
+const $=id=>document.getElementById(id),editor=$('editor'),title=$('noteTitle'),subject=$('subject');
+const DB='melty-study-v1',TASKS='melty-study-tasks-v1';
+let notes=[],current=null,undoStack=[],redoStack=[],lastHtml='',saveTimer;
+const uid=()=>Date.now().toString(36)+Math.random().toString(36).slice(2,7);
+function defaultNote(){return {id:uid(),title:'今日の勉強ノート',subject:'英語',html:'',updated:Date.now()}}
+function say(s){$('storageStatus').textContent=s}
+function plainCount(){return editor.innerText.length}
+function updateCount(){$('wordCount').textContent=plainCount()+' 文字'}
+function snap(){if(editor.innerHTML!==lastHtml){undoStack.push(lastHtml);if(undoStack.length>50)undoStack.shift();redoStack=[];lastHtml=editor.innerHTML}}
+function capture(){if(!current)return;current.title=title.value;current.subject=subject.value;current.html=editor.innerHTML;current.updated=Date.now()}
+function scheduleSave(){capture();updateCount();say('保存中…');clearTimeout(saveTimer);saveTimer=setTimeout(saveAll,250)}
+function saveAll(){try{localStorage.setItem(DB,JSON.stringify(notes));localStorage.setItem(TASKS,JSON.stringify([...$('tasks').querySelectorAll('label')].map(l=>({text:l.querySelector('span').textContent,done:l.querySelector('input').checked}))));say('このiPhoneに保存済み ♡');renderNotes()}catch(e){say('保存できません。端末の空き容量を確認してね。')}}
+function renderNotes(){let list=$('noteList');list.replaceChildren();notes.forEach(n=>{let b=document.createElement('button');b.className='note-chip'+(n.id===current?.id?' active':'');let meta=document.createElement('div');meta.className='meta';meta.textContent=n.subject;let name=document.createElement('div');name.className='name';name.textContent=n.title||'無題ノート';let count=document.createElement('div');count.className='meta';count.style.marginTop='5px';count.textContent=(n.html.replace(/<[^>]*>/g,'').length)+' 文字';b.append(meta,name,count);b.onclick=()=>switchNote(n.id);list.append(b)})}
+function switchNote(id){capture();current=notes.find(n=>n.id===id)||notes[0];title.value=current.title;subject.value=current.subject;editor.innerHTML=current.html;undoStack=[];redoStack=[];lastHtml=editor.innerHTML;renderNotes();updateCount();saveAll()}
+function escHtml(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function cmd(name,value=null){editor.focus();snap();document.execCommand(name,false,value);scheduleSave()}
+document.querySelectorAll('[data-cmd]').forEach(b=>b.addEventListener('click',()=>cmd(b.dataset.cmd)));
+$('fontSize').onchange=e=>cmd('fontSize',e.target.value);
+document.querySelectorAll('[data-color]').forEach(b=>b.onclick=()=>cmd('foreColor',b.dataset.color));
+$('customColor').oninput=e=>cmd('foreColor',e.target.value);
+function currentBlock(){let sel=window.getSelection();if(!sel||!sel.rangeCount)return null;let node=sel.anchorNode;if(node&&node.nodeType===Node.TEXT_NODE)node=node.parentElement;return node&&editor.contains(node)?node.closest('p,h2,blockquote,div,li'):null}
+$('heading').onclick=()=>{let block=currentBlock();if(block&&block.tagName==='H2')cmd('formatBlock','p');else cmd('formatBlock','h2')};
+$('quote').onclick=()=>{let block=currentBlock();if(block&&block.tagName==='BLOCKQUOTE')cmd('formatBlock','p');else cmd('formatBlock','blockquote')};
+$('highlight').onclick=()=>{let sel=window.getSelection();if(sel&&sel.rangeCount&&!sel.isCollapsed){let node=sel.anchorNode;if(node&&node.nodeType===Node.TEXT_NODE)node=node.parentElement;let bg=node&&node.closest('[style*="background-color"]');if(bg&&editor.contains(bg)){editor.focus();snap();document.execCommand('hiliteColor',false,'transparent');scheduleSave();return}}cmd('hiliteColor','#ffe2ee')};
+$('checkLine').onclick=()=>{let block=currentBlock();if(block&&block.tagName==='P'&&block.textContent.trim().startsWith('□ やること：')){snap();block.remove();scheduleSave();return}editor.focus();snap();document.execCommand('insertHTML',false,'<p>□ やること： </p>');scheduleSave()};
+$('heart').onclick=()=>{let sel=window.getSelection();if(sel&&sel.rangeCount&&!sel.isCollapsed&&sel.toString().includes('♡')){cmd('delete');return}let block=currentBlock();if(block&&block.textContent.trim()==='♡'){snap();block.remove();scheduleSave();return}editor.focus();snap();document.execCommand('insertText',false,'♡');scheduleSave()};
+$('deletePart').onclick=()=>{let sel=window.getSelection();if(!sel||!sel.rangeCount){say('削除したいパーツの中をタップしてね');return}let node=sel.anchorNode;if(node&&node.nodeType===Node.TEXT_NODE)node=node.parentElement;let target=node&&editor.contains(node)?node.closest('img,h2,blockquote,p,li,table,ul,ol'):null;if(!target){if(!sel.isCollapsed){snap();document.execCommand('delete',false,null);scheduleSave();return}say('削除したいパーツの中をタップしてから押してね');return}if(!confirm('このパーツを削除する？'))return;snap();target.remove();scheduleSave()};
+editor.addEventListener('input',()=>{snap();scheduleSave()});
+title.addEventListener('input',scheduleSave);subject.addEventListener('change',scheduleSave);
+$('newNote').onclick=()=>{capture();let n=defaultNote();n.title='新しいノート';notes.unshift(n);switchNote(n.id);title.focus();title.select()};
+$('deleteNote').onclick=()=>{if(notes.length===1){if(!confirm('このノートの本文を空にしますか？'))return;current.html='';switchNote(current.id);return}if(!confirm('「'+current.title+'」を削除する？'))return;notes=notes.filter(n=>n.id!==current.id);switchNote(notes[0].id)};
+$('undo').onclick=()=>{if(!undoStack.length)return;redoStack.push(editor.innerHTML);editor.innerHTML=undoStack.pop();lastHtml=editor.innerHTML;scheduleSave();updateCount()};
+$('redo').onclick=()=>{if(!redoStack.length)return;undoStack.push(editor.innerHTML);editor.innerHTML=redoStack.pop();lastHtml=editor.innerHTML;scheduleSave();updateCount()};
+function addImages(files){Array.from(files).forEach(file=>{if(!file.type.startsWith('image/'))return;if(file.size>5*1024*1024){alert('画像は1枚5MB以下にしてね（端末保存の容量節約のため）。');return}let reader=new FileReader();reader.onload=e=>{editor.focus();snap();let img=document.createElement('img');img.src=e.target.result;img.alt=file.name;let sel=window.getSelection();if(sel&&sel.rangeCount&&editor.contains(sel.anchorNode)){let range=sel.getRangeAt(0);range.deleteContents();range.insertNode(img);range.setStartAfter(img);range.collapse(true);sel.removeAllRanges();sel.addRange(range)}else editor.append(img);editor.append(document.createElement('p'));scheduleSave()};reader.readAsDataURL(file)})}
+$('imageInput').onchange=e=>{addImages(e.target.files);e.target.value=''};$('imageInput2').onchange=e=>{addImages(e.target.files);e.target.value=''};
+function updateTasks(){let labels=[...$('tasks').querySelectorAll('label')],done=labels.filter(l=>l.querySelector('input').checked).length;$('progress').textContent=done+' / '+labels.length+' 完了 ♡';try{localStorage.setItem(TASKS,JSON.stringify(labels.map(l=>({text:l.querySelector('span').textContent,done:l.querySelector('input').checked}))))}catch(e){}}
+function addTask(text,done=false){let label=document.createElement('label'),box=document.createElement('input'),span=document.createElement('span');box.type='checkbox';box.checked=done;span.textContent=text;label.append(box,span);$('tasks').append(label);box.addEventListener('change',updateTasks)}
+$('addTask').onclick=()=>{let v=$('taskInput').value.trim();if(!v)return;addTask(v);$('taskInput').value='';updateTasks()};$('taskInput').addEventListener('keydown',e=>{if(e.key==='Enter')$('addTask').click()});$('tasks').addEventListener('change',updateTasks);
+$('export').onclick=()=>{capture();saveAll();let blob=new Blob([JSON.stringify({version:1,notes,tasks:JSON.parse(localStorage.getItem(TASKS)||'[]')},null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='melty-study-backup.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1500);say('バックアップを書き出したよ ♡')};
+function init(){try{let data=JSON.parse(localStorage.getItem(DB)||'null');if(Array.isArray(data)&&data.length)notes=data.filter(n=>n&&n.id&&typeof n.html==='string')}catch(e){}if(!notes.length)notes=[defaultNote()];let taskData;try{taskData=JSON.parse(localStorage.getItem(TASKS)||'null')}catch(e){}if(Array.isArray(taskData)){ $('tasks').replaceChildren();taskData.forEach(t=>addTask(String(t.text||''),!!t.done))}else $('tasks').querySelectorAll('input').forEach(b=>b.addEventListener('change',updateTasks));current=notes[0];switchNote(current.id);updateTasks()}
+init();
+if('serviceWorker' in navigator && location.protocol.startsWith('http'))window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));
+})();
+</script></body></html>
